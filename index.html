@@ -603,12 +603,50 @@
 				</ul>
 			</article>
 
-			<!-- TAT WHOLESALE LIQUORS PROJECT PAGE (Placeholder) -->
+			<!-- TAT WHOLESALE LIQUORS PROJECT PAGE -->
 			<article id="tat-wholesale">
 				<h2 class="major">TAT Wholesale Liquors</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+				<span class="image main">
+					<img src="images/tat.jpg" alt=""
+						style="width: 100%; height: auto; aspect-ratio: 3/1; object-fit: cover;" />
+				</span>
 				<h3>Iowa Market Expansion</h3>
-				<p>Project details placeholder...</p>
+
+				<p><b>Objective:</b> TAT Wholesale Liquors is preparing to launch a new distribution centre in Iowa. To
+					maximize ROI, the goal was to identify high-value targets by analyzing historical sales data,
+					specifically focusing on counties with a population greater than 75,000 to determine the most
+					profitable counties, stores, and products.</p>
+
+				<p><b>Methodology:</b>
+				<ul>
+					<li><b>Data Ingestion & Cleaning:</b> Utilized SQL to process raw CSV datasets, using staging tables
+						to handle formatting challenges like currency symbols and scientific notation, ensuring data
+						integrity for analysis.</li>
+					<li><b>Aggregation:</b> Joined multiple tables (sales, products, stores, counties) and grouped data
+						by county and category to calculate total sales volume and revenue, filtering specifically for
+						the population threshold.</li>
+					<li><b>Strategic Filtering:</b> Narrowed down the addressable market to a precise list of 217 retail
+						outlets within the qualifying high-population counties to serve as the primary targets for the
+						launch campaign.</li>
+				</ul>
+				</p>
+
+				<p><b>Outcome:</b> The analysis identified a "Volume vs. Value" split, where high-population counties
+					like Polk drove volume, but Dickinson County had the highest spend per capita. Crucially, it
+					revealed a "Scotch Anomaly" in Johnson County, where stores sell 3x more Single Malt Scotch on
+					average than competitors, prompting a hyper-targeted high-end marketing strategy.</p>
+
+				<!-- REPORT LINK -->
+				<p style="text-align: center; margin-top: 2rem; margin-bottom: 1rem;">
+					<a href="Future_Focus_Report.pdf" target="_blank" class="button primary">View Full Report</a>
+				</p>
+
+				<!-- SQL QUERIES LINK -->
+				<p style="text-align: center; margin-bottom: 2rem;">
+					<a href="Future_Focus_Queries.sql" download="Future_Focus_Queries.sql" class="button primary">View
+						SQL Queries</a>
+				</p>
+
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
