@@ -395,12 +395,51 @@
 				</ul>
 			</article>
 
-			<!-- INSURANCE 4 YOU PROJECT PAGE (Placeholder) -->
+			<!-- INSURANCE 4 YOU PROJECT PAGE -->
 			<article id="insurance-4-you">
 				<h2 class="major">Insurance 4 You</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+				<span class="image main">
+					<img src="images/i4u.jpg" alt=""
+						style="width: 100%; height: auto; aspect-ratio: 3/1; object-fit: cover;" />
+				</span>
 				<h3>Health Insurance Risk Assessment</h3>
-				<p>Project details placeholder...</p>
+
+				<p><b>Objective:</b> Insurance-4-You (I4U) needed to transition from assumption-based decision-making to
+					a
+					data-driven strategy to optimize profitability. The goal was to analyze client health records,
+					travel
+					preferences, and regional safety data to improve billing accuracy, target family demographics
+					effectively, and refine risk zoning.</p>
+
+				<p><b>Methodology:</b>
+				<ul>
+					<li><b>Data Preparation:</b> Utilized R (tidyverse) to ingest and clean four distinct datasets,
+						ensuring data integrity across health, travel, and police reports.</li>
+					<li><b>Statistical Analysis:</b> Conducted correlation matrices and normality tests using
+						<code>skimr</code> and <code>moments</code> to validate relationships between variables like
+						BMI, smoking status, and insurance charges.
+					</li>
+					<li><b>Strategic Modelling:</b> Developed insights based on cross-referencing datasets, such as
+						mapping "suspicious" police incidents against traffic data to create granular risk zones.</li>
+				</ul>
+				</p>
+
+				<p><b>Outcome:</b> The analysis corrected a major pricing flaw: High BMI alone does not drive costs—the
+					interaction of <b>Smoking + High BMI</b> does. I recommended a tiered-risk model to prevent
+					undercharging high-risk clients. Additionally, travel data revealed families systematically prefer
+					cars over public transport, leading to a pivoted marketing strategy focusing on "Cost-Efficiency"
+					rather than luxury.</p>
+
+				<!-- REPORT LINK -->
+				<p style="text-align: center; margin-top: 2rem; margin-bottom: 1rem;">
+					<a href="Insurance_4_You_report.pdf" target="_blank" class="button primary">View Full Report</a>
+				</p>
+
+				<!-- CODE LINK -->
+				<p style="text-align: center; margin-bottom: 2rem;">
+					<a href="Insurance_4_You.R" download="Insurance_4_You.R" class="button primary">View R Script</a>
+				</p>
+
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
