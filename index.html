@@ -16,28 +16,13 @@
 	<div id="wrapper">
 
 		<header id="header">
-			<!-- 
-				UPDATES:
-				- Removed 'width', 'height', and 'line-height' inline styles to revert to original size.
-				- Kept 'overflow: hidden;' and 'border-radius: 50%;' to ensure the image masks correctly.
-			-->
 			<div class="logo" style="overflow: hidden; border-radius: 50%;">
-				<!-- 
-                    UPDATES:
-                    - Re-added 'transform: scale(1.35);' to zoom in significantly.
-					- Kept 'transform-origin: top center;' to focus on the face.
-                -->
 				<img src="images/me.png" alt="Dominic Azonobi"
 					style="width: 100%; height: 100%; object-fit: cover; object-position: top; transform: scale(1.35); transform-origin: top center;">
 			</div>
 			<div class="content">
 				<div class="inner">
 					<h1>Dominic Azonobi</h1>
-
-					<!-- 
-						UPDATES:
-						- Added line breaks <br /> to make the bio more compact and readable as requested.
-					-->
 					<p>Welcome<br />
 						I'm Dom, and this is my portfolio, where I share my projects,<br />
 						data-driven insights, and the stories behind them.</p>
@@ -47,7 +32,6 @@
 				<ul>
 					<li><a href="#intro">Intro</a></li>
 					<li><a href="#work">Work</a></li>
-					<!-- Removed About Link -->
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -55,13 +39,9 @@
 
 		<div id="main">
 
+			<!-- INTRO SECTION -->
 			<article id="intro">
 				<h2 class="major">Intro</h2>
-				<!-- 
-					UPDATES:
-					- Changed image source from 'images/pic01.jpg' to 'images/intro.png'
-					- Applied 3:1 aspect ratio styling to match the Work section.
-				-->
 				<span class="image main">
 					<img src="images/intro.png" alt=""
 						style="width: 100%; height: auto; aspect-ratio: 960/320; object-fit: cover;" />
@@ -116,17 +96,11 @@
 				<p style="text-align: center; margin-top: 2rem;">
 					<a href="Dominic Azonobi CV.pdf" target="_blank" class="button">View my CV</a>
 				</p>
-
 			</article>
 
+			<!-- WORK LIST SECTION -->
 			<article id="work">
 				<h2 class="major">Work</h2>
-				<!-- 
-					UPDATES:
-					- Changed image source from 'images/pic02.jpg' to 'images/work.jpg'
-					- Updated styles to use aspect-ratio: 960/320 (3:1) to strictly enforce the requested shape.
-					- Kept object-fit: cover to ensure the image crops into that ratio.
-				-->
 				<span class="image main">
 					<img src="images/work.jpg" alt=""
 						style="width: 100%; height: auto; aspect-ratio: 960/320; object-fit: cover;" />
@@ -144,11 +118,6 @@
 										<b>Vantage Point Analytics</b><br />
 										Trading Strategy For Earnings Events
 									</td>
-									<!-- 
-										UPDATES:
-										- Changed 'text-align: right;' to 'text-align: center;' 
-										  to fix the button being slightly off-center.
-									-->
 									<td style="text-align: center; vertical-align: middle;">
 										<a href="#vantage-point" class="button small">View Project</a>
 									</td>
@@ -232,11 +201,6 @@
 			<!-- VANTAGE POINT PROJECT PAGE -->
 			<article id="vantage-point">
 				<h2 class="major">Vantage Point Analytics</h2>
-				<!-- 
-					UPDATES:
-					- Changed image source to 'images/vp1.jpg'
-					- Applied 3:1 aspect ratio styling to match other sections.
-				-->
 				<span class="image main">
 					<img src="images/vp1.jpg" alt=""
 						style="width: 100%; height: auto; aspect-ratio: 960/320; object-fit: cover;" />
@@ -271,12 +235,11 @@
 						Report</a>
 				</p>
 
-				<!-- PRESENTATION VIDEO LINK -->
+				<!-- PRESENTATION VIDEO LINK (Vantage Point) -->
 				<p style="text-align: center; margin-bottom: 1rem;">
 					<!-- 
 						UPDATES:
-						- Changed href to the YouTube URL
-						- Kept button class and target
+						- Corrected the video link for Vantage Point Analytics to: https://youtu.be/ko-qC_pyFSw
 					-->
 					<a href="https://youtu.be/ko-qC_pyFSw" target="_blank" class="button primary">View Presentation
 						Video</a>
@@ -284,12 +247,7 @@
 
 				<!-- NOTEBOOK LINK -->
 				<p style="text-align: center; margin-bottom: 2rem;">
-					<!-- 
-						UPDATES:
-						- Changed text to "View Code".
-						- Kept 'download' attribute to force download on the live site.
-					-->
-					<a href="VP_Analytics.ipynb" download="VP_Analytics.ipynb" class="button primary">View Code</a>
+					<a href="VP Analytics.html" target="_blank" class="button primary">View Code</a>
 				</p>
 
 				<ul class="actions">
@@ -300,10 +258,61 @@
 			<!-- NHS PROJECT PAGE -->
 			<article id="nhs">
 				<h2 class="major">NHS</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+				<span class="image main">
+					<img src="images/nhs.jpg" alt=""
+						style="width: 100%; height: auto; aspect-ratio: 960/320; object-fit: cover;" />
+				</span>
 
-				<h3>Expanding Infrastructure</h3>
-				<p>Project details placeholder...</p>
+				<h3>Expanding Infrastructure & Capacity Analysis</h3>
+
+				<p><b>Objective:</b> To analyse whether current NHS GP capacity and staffing levels are sufficient to
+					meet post-pandemic demand. The project investigated appointment availability, attendance rates
+					(DNAs), and resource utilisation across 30 months of data, while also exploring public sentiment via
+					Twitter to gauge real-time system strain.</p>
+
+				<p><b>Methodology:</b>
+				<ul>
+					<li><b>Data Wrangling:</b> Ingested and cleaned three disparate datasets (Regional Appointments,
+						Actual Duration, National Categories) using Pandas. Handled complex date parsing and memory
+						optimisation for millions of records.</li>
+					<li><b>Analytical Framework:</b> Created a reproducible pipeline to aggregate data by month, region,
+						and healthcare professional type. Calculated key metrics like "System Capacity Utilisation" and
+						daily average volumes.</li>
+					<li><b>Visualisation:</b> Utilised Seaborn and Matplotlib to map seasonal demand cycles, visualize
+						the "General Practice vs. Other Staff" workload split, and analyse appointment mode preferences
+						(Face-to-Face vs. Telephone).</li>
+				</ul>
+				</p>
+
+				<p><b>Outcome:</b> The analysis revealed predictable seasonal demand surges (Autumn/Spring) and a
+					consistent 95% attendance rate, challenging the narrative that DNAs are the primary cause of
+					pressure. It highlighted that non-GP staff scale effectively with demand, suggesting a "flexible
+					workforce" strategy is viable. Recommendations included expanding underutilised video consultations
+					and integrating social sentiment for proactive capacity planning.</p>
+
+				<!-- REPORT LINK -->
+				<p style="text-align: center; margin-top: 2rem; margin-bottom: 1rem;">
+					<a href="NHS_report.pdf" target="_blank" class="button primary">View Full Report</a>
+				</p>
+
+				<!-- PRESENTATION VIDEO LINK (NHS) -->
+				<!-- 
+					UPDATES:
+					- Corrected the video link for NHS to: https://youtu.be/CHoEljhe790
+				-->
+				<p style="text-align: center; margin-bottom: 1rem;">
+					<a href="https://youtu.be/CHoEljhe790" target="_blank" class="button primary">View Presentation
+						Video</a>
+				</p>
+
+				<!-- NOTEBOOK LINK (NHS) -->
+				<!-- 
+					UPDATES:
+					- Added the "View Code" button linking to 'NHS.ipynb' with download attribute.
+				-->
+				<p style="text-align: center; margin-bottom: 2rem;">
+					<a href="NHS.ipynb" download="NHS.ipynb" class="button primary">View Code</a>
+				</p>
 
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
@@ -311,85 +320,64 @@
 			</article>
 
 			<!-- TURTLE GAMES PROJECT PAGE -->
-			<article id="turtle-games">
-				<h2 class="major">Turtle Games</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-
-				<h3>Improving Sales Performance</h3>
-				<p>Project details placeholder...</p>
-
-				<ul class="actions">
-					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
-				</ul>
 			</article>
 
-			<!-- INSURANCE 4 YOU PROJECT PAGE -->
+			<!-- INSURANCE 4 YOU PROJECT PAGE (Placeholder) -->
 			<article id="insurance-4-you">
 				<h2 class="major">Insurance 4 You</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-
 				<h3>Health Insurance Risk Assessment</h3>
 				<p>Project details placeholder...</p>
-
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
 			</article>
 
-			<!-- BRIGHT FUTURE PROJECT PAGE -->
+			<!-- BRIGHT FUTURE PROJECT PAGE (Placeholder) -->
 			<article id="bright-future">
 				<h2 class="major">Bright Future</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-
 				<h3>Football Merchandising Opportunity</h3>
 				<p>Project details placeholder...</p>
-
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
 			</article>
 
-			<!-- 2MARKET PROJECT PAGE -->
+			<!-- 2MARKET PROJECT PAGE (Placeholder) -->
 			<article id="2market">
 				<h2 class="major">2Market</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-
 				<h3>Understanding Customer Purchase Behaviour</h3>
 				<p>Project details placeholder...</p>
-
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
 			</article>
 
-			<!-- INVEST GENICS PROJECT PAGE -->
+			<!-- INVEST GENICS PROJECT PAGE (Placeholder) -->
 			<article id="invest-genics">
 				<h2 class="major">Invest Genics</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-
 				<h3>Asset Recommendations For Market Instability</h3>
 				<p>Project details placeholder...</p>
-
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
 			</article>
 
-			<!-- TAT WHOLESALE LIQUORS PROJECT PAGE -->
+			<!-- TAT WHOLESALE LIQUORS PROJECT PAGE (Placeholder) -->
 			<article id="tat-wholesale">
 				<h2 class="major">TAT Wholesale Liquors</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-
 				<h3>Iowa Market Expansion</h3>
 				<p>Project details placeholder...</p>
-
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
 			</article>
 
-			<!-- Removed About Article -->
-
+			<!-- CONTACT SECTION -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
 				<form method="post" action="#">
@@ -414,12 +402,6 @@
 				</form>
 
 				<ul class="icons">
-					<!-- 
-						UPDATES:
-						- Removed Twitter, Facebook, Instagram.
-						- Updated GitHub and LinkedIn with your URLs.
-						- Added Email icon.
-					-->
 					<li><a href="https://github.com/dcazonobi" target="_blank" class="icon brands fa-github"><span
 								class="label">GitHub</span></a></li>
 					<li><a href="https://www.linkedin.com/in/dominic-azonobi-4922542a7" target="_blank"
@@ -437,11 +419,6 @@
 
 	</div>
 
-	<!-- 
-		UPDATES:
-		- Added inline style to set the background image to 'images/background.jpg'.
-		- Added background-size and position to ensure it covers the screen properly.
-	-->
 	<div id="bg"
 		style="background-image: url('images/background.jpg'); background-size: cover; background-position: center;">
 	</div>
