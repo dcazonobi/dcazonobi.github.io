@@ -445,12 +445,56 @@
 				</ul>
 			</article>
 
-			<!-- BRIGHT FUTURE PROJECT PAGE (Placeholder) -->
+			<!-- BRIGHT FUTURE PROJECT PAGE -->
 			<article id="bright-future">
 				<h2 class="major">Bright Future</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+				<span class="image main">
+					<img src="images/bf.jpg" alt=""
+						style="width: 100%; height: auto; aspect-ratio: 3/1; object-fit: cover;" />
+				</span>
 				<h3>Football Merchandising Opportunity</h3>
-				<p>Project details placeholder...</p>
+
+				<p><b>Objective:</b> BrightFuture aimed to launch a European football team and maximize merchandise
+					profits while strictly adhering to a €150m five-year budget for 17 players. The challenge was to
+					resolve a strategic debate between investing in Spanish vs. Brazilian talent and to identify
+					"high-appeal, low-cost" players who drive fan engagement without the "megastar" price tag.</p>
+
+				<p><b>Methodology:</b>
+				<ul>
+					<li><b>Data Engineering:</b> Ingested and joined SOFIFA (EA Sports) datasets, standardizing player
+						attributes and developing a custom formula to extrapolate weekly wages into a comprehensive
+						5-year financial projection.</li>
+					<li><b>Comparative Analysis:</b> Executed SQL queries to benchmark average age, physical metrics,
+						and costs across specific nationalities (Global vs. Brazil vs. Spain), revealing that Brazilian
+						players averaged significantly higher wages and age.</li>
+					<li><b>Interactive Dashboarding:</b> Built a dynamic Tableau dashboard utilizing Sets and calculated
+						fields to allow stakeholders to "scout" players in real-time, watching the budget impact live as
+						they built their roster.</li>
+				</ul>
+				</p>
+
+				<p><b>Outcome:</b> The project delivered a robust decision-support tool that prevented budget overruns.
+					The comparative analysis highlighted that while Brazilian players offered experience, they came at a
+					premium (Avg Age 28, higher wages), whereas other markets offered better long-term ROI. The
+					dashboard successfully enabled the selection of a competitive 17-player squad within the €150m cap.
+				</p>
+
+				<!-- REPORT LINK -->
+				<p style="text-align: center; margin-top: 2rem; margin-bottom: 1rem;">
+					<a href="BrightFuture_Report.pdf" target="_blank" class="button primary">View Full Report</a>
+				</p>
+
+				<!-- DASHBOARD LINK -->
+				<p style="text-align: center; margin-bottom: 1rem;">
+					<a href="BrightFuture_Dashboard.twbx" download="BrightFuture_Dashboard.twbx"
+						class="button primary">View Dashboard</a>
+				</p>
+
+				<!-- SQL QUERIES LINK -->
+				<p style="text-align: center; margin-bottom: 2rem;">
+					<a href="Brightfuture.sql" download="Brightfuture.sql" class="button primary">View SQL Queries</a>
+				</p>
+
 				<ul class="actions">
 					<li><a href="#work" class="button icon solid fa-chevron-left">Back to Work</a></li>
 				</ul>
